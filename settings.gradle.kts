@@ -4,8 +4,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        jcenter()
     }
 }
-rootProject.name = "Kotlin Base Template"
+rootProject.name = "Puppy Adoption App"
 include(":app")

@@ -1,4 +1,4 @@
-package it.alexs.kotlinbasetemplate
+package it.alexs.puppyapp
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

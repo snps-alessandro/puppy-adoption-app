@@ -31,15 +31,7 @@ android {
             versionNameSuffix = "-debug"
             isDebuggable = true
         }
-
-        create("staging") {
-            initWith(getByName("debug"))
-            versionNameSuffix = "-staging"
-            matchingFallbacks.add("debug")
-        }
     }
-
-    testBuildType = "staging"
 
     kotlinOptions {
         jvmTarget = "1.8"
@@ -58,7 +50,7 @@ android {
 
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.AndroidX.Compose.compose
-        kotlinCompilerVersion = Versions.Kotlin.kotlin
+        kotlinCompilerVersion = "1.4.30"
     }
 
     packagingOptions {
@@ -67,19 +59,6 @@ android {
     }
 
     // dynamicFeatures = mutableSetOf()
-
-    sourceSets {
-        getByName("staging") {
-            java {
-                srcDirs("src\\staging\\java")
-            }
-        }
-    }
-
-    lintOptions {
-        isWarningsAsErrors = true
-        isAbortOnError = true
-    }
 }
 
 dependencies {
@@ -94,6 +73,9 @@ dependencies {
     implementation(Libs.AndroidX.Compose.icon)
     implementation(Libs.AndroidX.Compose.livedata)
     implementation(Libs.AndroidX.Compose.test)
+    implementation(Libs.AndroidX.Compose.activity)
+    implementation(Libs.AndroidX.Compose.viewModel)
+    implementation(Libs.AndroidX.Compose.navigation)
     api(Libs.AndroidX.CameraX.cameraX)
 
     implementation(Libs.Google.material)

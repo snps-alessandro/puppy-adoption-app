@@ -1,6 +1,6 @@
 object Versions {
 
-    const val applicationID = "it.alexs.kotlinbasetemplate"
+    const val applicationID = "it.alexs.puppyapp"
     const val compileSdk = 29
     const val minSdk = 24
     const val targetSdk = 30
@@ -11,7 +11,7 @@ object Versions {
     const val gradle = "7.0.0-alpha04"
 
     object Kotlin {
-        const val kotlin = "1.4.21"
+        const val kotlin = "1.4.30"
         const val core = "1.1.0"
         const val coroutines = "1.3.5"
     }
@@ -57,7 +57,10 @@ object Versions {
         const val fragmentKtx = "1.2.5"
 
         object Compose {
-            const val compose = "1.0.0-alpha08"
+            const val compose = "1.0.0-beta01"
+            const val composeActivity = "1.3.0-alpha03"
+            const val composeViewModel = "1.0.0-alpha02"
+            const val composeNavigation = "1.0.0-alpha08"
         }
 
         object Test {
@@ -148,6 +151,12 @@ object Libs {
             const val iconExtended = "androidx.compose.material:material-icons-extended:${Versions.AndroidX.Compose.compose}"
             const val livedata = "androidx.compose.runtime:runtime-livedata:${Versions.AndroidX.Compose.compose}"
             const val test = "androidx.compose.ui:ui-test-junit4:${Versions.AndroidX.Compose.compose}"
+
+            const val activity = "androidx.activity:activity-compose:${Versions.AndroidX.Compose.composeActivity}"
+
+            const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.AndroidX.Compose.composeViewModel}"
+
+            const val navigation = "androidx.navigation:navigation-compose:${Versions.AndroidX.Compose.composeNavigation}"
         }
 
         object Test {
